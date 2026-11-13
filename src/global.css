@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+@import 'uniwind';
+@import 'heroui-native/styles';
+
+/* Let Tailwind's scanner see HeroUI Native's compiled classNames. */
+@source '../node_modules/heroui-native/lib';
+
+/* ════════════════════════════════════════════════════════════════════════════
+ * APP DESIGN TOKENS — the locked visual identity for THIS app.
+ *
+ * Owned by the design system: the infer/plan step writes this block and the
+ * refine path ("warmer", "more playful") edits it. Components consume these
+ * through token utilities (bg-accent, text-foreground, rounded-2xl, …) — they
+ * must NEVER hard-code hex or magic numbers. To restyle the whole app, edit the
+ * tokens here and let components re-snap; do not hand-patch individual screens.
+ *
+ * These override HeroUI Native's defaults (loaded just above), so only declare
+ * what differs. See design/dials.json for variance / motion / density and
+ * design/DESIGN.md for the identity this encodes.
+ * ════════════════════════════════════════════════════════════════════════════ */
+
+/* @newly:tokens:start — Lalin: picture-book dawn. Light-only by design (the app locks
+ * to light); dark mirrors light so every variant defines the same variables. */
+@layer theme {
+  :root {
+    @variant light {
+      --background: #FFF6EF;
+      --foreground: #4A3B47;
+      --surface: #FFFCF9;
+      --surface-foreground: #4A3B47;
+      --surface-secondary: #FBEADF;
+      --surface-secondary-foreground: #4A3B47;
+      --surface-tertiary: #F5E1D4;
+      --surface-tertiary-foreground: #4A3B47;
+      --overlay: #FFFCF9;
+      --overlay-foreground: #4A3B47;
+      --muted: #8C7A86;
+      --default: #F7E7DC;
+      --default-foreground: #4A3B47;
+      --accent: #D9826B;
+      --accent-foreground: #FFFCF9;
+      --field-background: #FFFCF9;
+      --field-foreground: #4A3B47;
+      --field-placeholder: #A8979F;
+      --success: #7FD6C7;
+      --success-foreground: #4A3B47;
+      --warning: #FFE3A8;
+      --warning-foreground: #4A3B47;
+      --danger: #E07A6A;
+      --danger-foreground: #FFFCF9;
+      --segment: #FFFCF9;
+      --segment-foreground: #4A3B47;
+      --border: #F1DFD3;
+      --separator: #E8D3C6;
+      --link: #4A3B47;
+    }
+    @variant dark {
+      --background: #FFF6EF;
+      --foreground: #4A3B47;
+      --surface: #FFFCF9;
+      --surface-foreground: #4A3B47;
+      --surface-secondary: #FBEADF;
+      --surface-secondary-foreground: #4A3B47;
+      --surface-tertiary: #F5E1D4;
+      --surface-tertiary-foreground: #4A3B47;
+      --overlay: #FFFCF9;
+      --overlay-foreground: #4A3B47;
+      --muted: #8C7A86;
+      --default: #F7E7DC;
+      --default-foreground: #4A3B47;
+      --accent: #D9826B;
+      --accent-foreground: #FFFCF9;
+      --field-background: #FFFCF9;
+      --field-foreground: #4A3B47;
+      --field-placeholder: #A8979F;
+      --success: #7FD6C7;
+      --success-foreground: #4A3B47;
+      --warning: #FFE3A8;
+      --warning-foreground: #4A3B47;
+      --danger: #E07A6A;
+      --danger-foreground: #FFFCF9;
+      --segment: #FFFCF9;
+      --segment-foreground: #4A3B47;
+      --border: #F1DFD3;
+      --separator: #E8D3C6;
+      --link: #4A3B47;
+    }
+  }
+}
+
+@theme {
+  --radius: 0.875rem;
+
+  --color-milk: #FFF6EF;
+  --color-cocoa: #4A3B47;
+  --color-peach: #FFC9B5;
+  --color-peach-deep: #F4A78F;
+  --color-clay: #D9826B;
+  --color-mint: #BFE8DF;
+  --color-honey: #FFE3A8;
+  --color-mist: #CFE0F5;
+  --color-lavender: #E3D7F7;
+  --color-turquoise: #7FD6C7;
+  --color-turquoise-deep: #3E9C8B;
+
+  --font-display: 'Fredoka_600SemiBold';
+  --font-display-bold: 'Fredoka_700Bold';
+  --font-sans: 'Nunito_500Medium';
+  --font-body: 'Nunito_500Medium';
+  --font-strong: 'Nunito_700Bold';
+  --font-heavy: 'Nunito_800ExtraBold';
+}
+/* @newly:tokens:end */
+
